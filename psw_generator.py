@@ -2,7 +2,10 @@ import random as r
 import os
 from datetime import datetime
 
-def main():
+def main() -> None:
+    """
+    Function used as main. It starts the application.
+    """
     psw = ""
     lower = "abcdefghijklmnopqrstuvwxyz"
     upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -22,6 +25,9 @@ def main():
 
 
 def inputLen() -> int:
+    """
+    
+    """
     n = 0
     while n <= 15:
         try:
@@ -54,7 +60,7 @@ def createFile(psw : str) -> bool:
 def inputFileName() -> str:
     return input("\nInserisci il nome del file dove vuoi salvare la password: ")
     
-def log(string : str, type : int, fileName : str):
+def log(string : str, type : int, fileName : str) -> None:
     """
     Save in a log file all the processes/error of the program
 
